@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -35,6 +34,10 @@ const config = {
         calendar: 'gregory',
       }
     }
+  },
+
+  future: {
+    experimental_faster: true,
   },
 
   presets: [
@@ -78,12 +81,12 @@ const config = {
           { to: '/report', label: '问题反馈', position: 'left'},
           {
             href: 'https://github.com/lyswhut/lx-music-desktop',
-            label: '桌面版GitHub',
+            label: '桌面版 GitHub',
             position: 'right',
           },
           {
             href: 'https://github.com/lyswhut/lx-music-mobile',
-            label: '移动版GitHub',
+            label: '移动版 GitHub',
             position: 'right',
           },
         ],
@@ -134,8 +137,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} LX Music, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
       algolia: {
         // The application ID provided by Algolia
